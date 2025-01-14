@@ -5,7 +5,7 @@ from datetime import datetime
 # This will create a log file name with the current timestamp in the format MM_DD_YYYY_HH_MM_SS.log
 LOG_FILE=f"{datetime.now().strftime('%m_%d_%Y_%H_%M_%S')}.log"
 
-# This creates the path where the log file will be stored:
+# This creates the path where the log file will be Saved:
 # - os.getcwd() gets the current working directory.
 # - "logs" is the folder name where logs will be stored.
 # - LOG_FILE is the log file name with the timestamp.
@@ -14,7 +14,7 @@ logs_path=os.path.join(os.getcwd(),"logs",LOG_FILE)
 # This creates the "logs" folder (if it doesn't already exist) to store the log files.
 os.makedirs(logs_path, exist_ok=True)
 
-# This combines the path and the file name to get the full file path where the log file will be saved.
+# LOG_FILE_PATH is the full path to where the log file will be saved, including both the directory and the file name
 LOG_FILE_PATH=os.path.join(logs_path, LOG_FILE)
 
 

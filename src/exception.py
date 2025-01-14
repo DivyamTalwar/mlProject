@@ -1,4 +1,5 @@
 import sys
+from src.logger import logging #To Import The Logging File From The Src Folder
 
 #This function provides a detailed error message whenever an exception occurs
 def error_message_detail(error,error_detail:sys):
@@ -10,7 +11,7 @@ def error_message_detail(error,error_detail:sys):
 
     return error_message
 
-    
+
 
 class CustomException(Exception):
     

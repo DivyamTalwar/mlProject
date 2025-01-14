@@ -1,4 +1,8 @@
 numpy
 pandas
+matplotlib
+seaborn
 scikit-learn
--e . #This Is used to link setup.py s0 when you install requirements.txt it will automatically built the package at the end
+xgboost
+catboost
+#-e . #This Is used to link setup.py s0 when you install requirements.txt it will automatically built the package at the end
