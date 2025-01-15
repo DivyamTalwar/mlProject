@@ -9,8 +9,8 @@ from sklearn.model_selection import train_test_split
 from dataclasses import dataclass # Dataclass decorator to simplify class creation for data storage
 from src.Components.data_transformation import DataTransformation
 from src.Components.data_transformation import DataTransformationConfig
-#from src.Components.model_trainer import ModelTrainerConfig
-#from src.Components.model_trainer import ModelTrainer
+from src.Components.model_trainer import ModelTrainerConfig
+from src.Components.model_trainer import ModelTrainer
 
 
 #This class DataIngestionConfig defines the paths for storing the data.These paths are inside the "artifacts" directory
@@ -65,5 +65,5 @@ if __name__ == "__main__":
     data_transformation = DataTransformation()
     train_arr, test_arr, _ = data_transformation.initiate_data_transformation(train_data, test_data)
 
-    #modeltrainer = ModelTrainer()
-    #print(modeltrainer.initiate_model_trainer(train_arr, test_arr))
+    modeltrainer = ModelTrainer()
+    print(modeltrainer.initiate_model_trainer(train_arr, test_arr))
