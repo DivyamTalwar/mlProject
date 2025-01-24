@@ -1,13 +1,12 @@
 import sys
-from src.logger import logging #To Import The Logging File From The Src Folder
+from src.logger import logging
 
 #This function provides a detailed error message whenever an exception occurs
 def error_message_detail(error,error_detail:sys):
     #in exc_tb all the informaton will be stored like on which file the error has occured on which line etc
     _,_,exc_tb=error_detail.exc_info() #exc.info() return 3 length tuple we are only interested in the last value
     file_name=exc_tb.tb_frame.f_code.co_filename #To get the filename in which error has occured
-    error_message="Error occured in python script name [{0}] line number [{1}] error message[{2}]".format(
-     file_name,exc_tb.tb_lineno,str(error))
+    error_message="Error occured in python script name [{file_name}] line number [{exc_tb.tb_lineno}] error message[{str(error}]"
 
     return error_message
 

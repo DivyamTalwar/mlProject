@@ -6,4 +6,5 @@ scikit-learn
 xgboost
 catboost
 dill
+flask
 #-e . #This Is used to link setup.py s0 when you install requirements.txt it will automatically built the package at the end
